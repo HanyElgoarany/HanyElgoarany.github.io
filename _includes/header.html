@@ -12,7 +12,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Dark Mode ---
+  // Dark Mode
   const toggleButton = document.getElementById('theme-toggle');
   const storedTheme = localStorage.getItem('theme');
   if (storedTheme) {
@@ -28,15 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem('theme', newTheme);
   };
 
-  // --- Section Navigation with Smooth Fade ---
+  // Section Navigation + Fade
   const homeLink = document.getElementById('nav-home');
   const projectsLink = document.getElementById('nav-projects');
   const homeSection = document.getElementById('home-section');
   const projectsSection = document.getElementById('projects-section');
   const headerTitle = document.getElementById('header-title');
 
-  const fadeIn = (element) => element.classList.remove('hidden');
-  const fadeOut = (element) => element.classList.add('hidden');
+  const fadeIn = (el) => el.classList.remove('hidden');
+  const fadeOut = (el) => el.classList.add('hidden');
 
   const changeHeaderTitle = (newTitle) => {
     fadeOut(headerTitle);
@@ -48,9 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const switchSection = (showSection, hideSection) => {
     fadeOut(hideSection);
-    setTimeout(() => {
-      fadeIn(showSection);
-    }, 250); // matches half of CSS fade duration
+    setTimeout(() => fadeIn(showSection), 250);
   };
 
   homeLink.onclick = (e) => {
