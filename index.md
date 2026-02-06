@@ -8,7 +8,7 @@ title: Home
   <!-- Home Section -->
   <section id="home-section">
     <h2>Welcome</h2>
-    <p>Hi, I’m {{ site.title }}! This is my technical portfolio showcasing my projects and work.</p>
+    <p>Hi, I’m {{ site.title }}! I'm a Technical Professional currently interested in imaging, deployments, and automation. This is my technical portfolio showcasing my projects and write-ups.</p>
   </section>
 
   <!-- Projects Section -->
