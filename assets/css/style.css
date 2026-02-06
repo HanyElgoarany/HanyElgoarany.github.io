@@ -58,18 +58,22 @@ pre { padding: 1em; overflow-x: auto; }
 }
 #theme-toggle:hover { background-color: var(--border); }
 
-/* --- Fade Section --- */
+/* --- Fade Sections --- */
 .fade-section {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
+  height: auto;
+  pointer-events: auto;
+  overflow: hidden;
 }
 
 .fade-section.hidden {
   opacity: 0;
   pointer-events: none;
-  position: absolute;
+  height: 0;
 }
-/* Fade effect for header title */
+
+/* --- Fade Header Title --- */
 #header-title {
   transition: opacity 0.5s ease-in-out;
 }
