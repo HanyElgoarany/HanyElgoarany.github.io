@@ -5,5 +5,4 @@ markdown: kramdown
 collections:
   projects:
     output: true
-Projects found: {{ site.projects | size }}
 
