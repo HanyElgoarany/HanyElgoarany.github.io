@@ -13,14 +13,15 @@ title: Home
 
   <!-- Projects Section -->
   <section id="projects-section" style="display:none;">
-    <h2>Projects</h2>
-    <ul>
-      {% for project in site.projects %}
-      <li>
-        <a href="{{ project.url }}">{{ project.title }}</a> - {{ project.description }}
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
+  <h2>Projects</h2>
+  <ul>
+    {% for project in site.projects %}
+    <li>
+      <a href="{{ project.url }}">{{ project.title }}</a> - {{ project.description }}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
 
 </main>
