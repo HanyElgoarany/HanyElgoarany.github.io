@@ -28,28 +28,27 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem('theme', newTheme);
   };
 
-  // --- Section Navigation ---
+  // --- Section Navigation with Fade ---
   const homeLink = document.getElementById('nav-home');
   const projectsLink = document.getElementById('nav-projects');
   const homeSection = document.getElementById('home-section');
   const projectsSection = document.getElementById('projects-section');
   const headerTitle = document.getElementById('header-title');
 
-  // Optional debug
-  // console.log("Home section:", homeSection);
-  // console.log("Projects section:", projectsSection);
+  const fadeIn = (section) => section.classList.remove('hidden');
+  const fadeOut = (section) => section.classList.add('hidden');
 
   homeLink.onclick = (e) => {
     e.preventDefault();
-    homeSection.style.display = 'block';
-    projectsSection.style.display = 'none';
+    fadeIn(homeSection);
+    fadeOut(projectsSection);
     headerTitle.textContent = '{{ site.title }}';
   };
 
   projectsLink.onclick = (e) => {
     e.preventDefault();
-    homeSection.style.display = 'none';
-    projectsSection.style.display = 'block';
+    fadeIn(projectsSection);
+    fadeOut(homeSection);
     headerTitle.textContent = 'Projects';
   };
 });
