@@ -1,0 +1,12 @@
+<button id="theme-toggle">Toggle theme</button>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  toggle.onclick = () => {
+    const theme = document.documentElement.getAttribute('data-theme');
+    document.documentElement.setAttribute(
+      'data-theme',
+      theme === 'dark' ? 'light' : 'dark'
+    );
+  };
+</script>
