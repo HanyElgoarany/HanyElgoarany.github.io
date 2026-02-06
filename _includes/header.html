@@ -1,16 +1,17 @@
-<header style="display:flex; justify-content: space-between; align-items:center; padding: 1rem; background-color: var(--header-bg); border-bottom: 1px solid var(--border);">
-  <h1 style="margin:0;">
-    <a href="{{ '/' | relative_url }}" style="color: var(--text); text-decoration:none;">{{ site.title }}</a>
+<header style="display:flex; justify-content: space-between; align-items:center; padding:1rem; background-color: var(--header-bg); border-bottom:1px solid var(--border);">
+  <h1 id="header-title" style="margin:0;">
+    <a href="#" style="color: var(--text); text-decoration:none;">{{ site.title }}</a>
   </h1>
 
   <nav style="display:flex; gap:1rem; align-items:center;">
-    <a href="{{ '/' | relative_url }}">Home</a>
-    <a href="{{ '/projects/' | relative_url }}">Projects</a>
+    <a href="#" id="nav-home">Home</a>
+    <a href="#" id="nav-projects">Projects</a>
     <button id="theme-toggle" style="padding:0.3rem 0.6rem; cursor:pointer;">Toggle Dark Mode</button>
   </nav>
 </header>
 
 <script>
+  // Dark mode
   const toggleButton = document.getElementById('theme-toggle');
   const storedTheme = localStorage.getItem('theme');
   if (storedTheme) {
@@ -24,5 +25,24 @@
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
+  };
+
+  // Dynamic section navigation
+  const homeLink = document.getElementById('nav-home');
+  const projectsLink = document.getElementById('nav-projects');
+  const homeSection = document.getElementById('home-section');
+  const projectsSection = document.getElementById('projects-section');
+  const headerTitle = document.getElementById('header-title');
+
+  homeLink.onclick = () => {
+    homeSection.style.display = 'block';
+    projectsSection.style.display = 'none';
+    headerTitle.textContent = '{{ site.title }}';
+  };
+
+  projectsLink.onclick = () => {
+    homeSection.style.display = 'none';
+    projectsSection.style.display = 'block';
+    headerTitle.textContent = 'Projects';
   };
 </script>
