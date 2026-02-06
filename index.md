@@ -13,4 +13,5 @@ This site documents real-world projects, testing, and outcomes.
 {% for project in site.projects %}
 - [{{ project.title }}]({{ project.url }})
   - {{ project.description }}
+Projects found: {{ site.projects | size }}
 {% endfor %}
