@@ -1,10 +1,11 @@
 ---
 layout: page
 title: Projects
+permalink: /projects/
 ---
+# Projects
 
 {% for project in site.projects %}
-### [{{ project.title }}]({{ project.url }})
-{{ project.description }}
+- [{{ project.title }}]({{ project.url }})
+  - {{ project.description }}
 {% endfor %}
-
