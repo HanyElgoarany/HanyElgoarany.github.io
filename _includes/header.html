@@ -11,7 +11,8 @@
 </header>
 
 <script>
-  // Dark mode
+document.addEventListener("DOMContentLoaded", () => {
+  // --- Dark Mode ---
   const toggleButton = document.getElementById('theme-toggle');
   const storedTheme = localStorage.getItem('theme');
   if (storedTheme) {
@@ -27,22 +28,29 @@
     localStorage.setItem('theme', newTheme);
   };
 
-  // Dynamic section navigation
+  // --- Section Navigation ---
   const homeLink = document.getElementById('nav-home');
   const projectsLink = document.getElementById('nav-projects');
   const homeSection = document.getElementById('home-section');
   const projectsSection = document.getElementById('projects-section');
   const headerTitle = document.getElementById('header-title');
 
-  homeLink.onclick = () => {
+  // Optional debug
+  // console.log("Home section:", homeSection);
+  // console.log("Projects section:", projectsSection);
+
+  homeLink.onclick = (e) => {
+    e.preventDefault();
     homeSection.style.display = 'block';
     projectsSection.style.display = 'none';
     headerTitle.textContent = '{{ site.title }}';
   };
 
-  projectsLink.onclick = () => {
+  projectsLink.onclick = (e) => {
+    e.preventDefault();
     homeSection.style.display = 'none';
     projectsSection.style.display = 'block';
     headerTitle.textContent = 'Projects';
   };
+});
 </script>
