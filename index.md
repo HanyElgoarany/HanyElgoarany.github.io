@@ -1,8 +1,3 @@
----
-layout: home
-title: Home
----
-
 <main id="main-content">
 
   <!-- Home Section -->
@@ -25,4 +20,3 @@ title: Home
   </section>
 
 </main>
-
