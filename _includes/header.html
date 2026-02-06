@@ -28,8 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem('theme', newTheme);
   };
 
-  // --- Section Navigation with Fade ---
-  document.addEventListener("DOMContentLoaded", () => {
+  // --- Section Navigation with Smooth Fade ---
   const homeLink = document.getElementById('nav-home');
   const projectsLink = document.getElementById('nav-projects');
   const homeSection = document.getElementById('home-section');
@@ -40,24 +39,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const fadeOut = (element) => element.classList.add('hidden');
 
   const changeHeaderTitle = (newTitle) => {
-    fadeOut(headerTitle); // Fade out
+    fadeOut(headerTitle);
     setTimeout(() => {
-      headerTitle.textContent = newTitle; // Update text
-      fadeIn(headerTitle); // Fade in
-    }, 250); // Halfway through the section fade
+      headerTitle.textContent = newTitle;
+      fadeIn(headerTitle);
+    }, 250);
+  };
+
+  const switchSection = (showSection, hideSection) => {
+    fadeOut(hideSection);
+    setTimeout(() => {
+      fadeIn(showSection);
+    }, 250); // matches half of CSS fade duration
   };
 
   homeLink.onclick = (e) => {
     e.preventDefault();
-    fadeIn(homeSection);
-    fadeOut(projectsSection);
+    switchSection(homeSection, projectsSection);
     changeHeaderTitle('{{ site.title }}');
   };
 
   projectsLink.onclick = (e) => {
     e.preventDefault();
-    fadeIn(projectsSection);
-    fadeOut(homeSection);
+    switchSection(projectsSection, homeSection);
     changeHeaderTitle('Projects');
   };
 });
