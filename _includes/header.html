@@ -1,20 +1,22 @@
-<!-- _includes/header.html -->
+<header style="display:flex; justify-content: space-between; align-items:center; padding: 1rem; background-color: var(--header-bg); border-bottom: 1px solid var(--border);">
+  <h1 style="margin:0;">
+    <a href="{{ '/' | relative_url }}" style="color: var(--text); text-decoration:none;">{{ site.title }}</a>
+  </h1>
 
-<header style="display:flex; justify-content: space-between; align-items:center; padding: 1rem;">
-  <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-  
-  <button id="theme-toggle" style="padding:0.3rem 0.6rem; cursor:pointer;">
-    Toggle Dark Mode
-  </button>
+  <nav style="display:flex; gap:1rem; align-items:center;">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/projects/' | relative_url }}">Projects</a>
+    <button id="theme-toggle" style="padding:0.3rem 0.6rem; cursor:pointer;">Toggle Dark Mode</button>
+  </nav>
 </header>
 
 <script>
   const toggleButton = document.getElementById('theme-toggle');
-
-  // Load stored preference
   const storedTheme = localStorage.getItem('theme');
   if (storedTheme) {
     document.documentElement.setAttribute('data-theme', storedTheme);
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', 'dark');
   }
 
   toggleButton.onclick = () => {
