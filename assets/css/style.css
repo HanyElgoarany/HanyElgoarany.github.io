@@ -1,15 +1,15 @@
-/* Light theme (GitHub style) */
+/* Light theme */
 :root {
-  --bg: #ffffff;               /* page background */
-  --text: #24292f;             /* main text */
-  --link: #0969da;             /* links */
-  --header-bg: #f6f8fa;        /* header background */
-  --code-bg: #f6f8fa;          /* code block background */
+  --bg: #ffffff;
+  --text: #24292f;
+  --link: #0969da;
+  --header-bg: #f6f8fa;
+  --code-bg: #f6f8fa;
   --code-text: #24292f;
-  --border: #d0d7de;           /* subtle borders */
+  --border: #d0d7de;
 }
 
-/* Dark theme (GitHub dark style) */
+/* Dark theme */
 [data-theme="dark"] {
   --bg: #0d1117;
   --text: #c9d1d9;
@@ -26,27 +26,16 @@ body {
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  transition: background-color 0.3s, color 0.3s;
   margin: 0;
-  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Header */
-header {
-  background-color: var(--header-bg);
-  border-bottom: 1px solid var(--border);
-}
-
-/* Links */
 a {
   color: var(--link);
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
-}
+a:hover { text-decoration: underline; }
 
-/* Code blocks */
 pre, code {
   background-color: var(--code-bg);
   color: var(--code-text);
@@ -55,13 +44,8 @@ pre, code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
-/* Preformatted blocks (multi-line) */
-pre {
-  padding: 1em;
-  overflow-x: auto;
-}
+pre { padding: 1em; overflow-x: auto; }
 
-/* Toggle button */
 #theme-toggle {
   background-color: var(--bg);
   color: var(--text);
@@ -71,6 +55,4 @@ pre {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
-#theme-toggle:hover {
-  background-color: var(--border);
-}
+#theme-toggle:hover { background-color: var(--border); }
