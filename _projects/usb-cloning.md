@@ -1,6 +1,7 @@
 ---
 title: USB Cloning Without Dedicated Replicator Hardware
 description: Evaluating software-based methods to clone USB drives at scale without specialized hardware.
+date: 2026-02-06
 ---
 
 ## Business Need
