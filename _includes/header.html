@@ -29,27 +29,36 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // --- Section Navigation with Fade ---
+  document.addEventListener("DOMContentLoaded", () => {
   const homeLink = document.getElementById('nav-home');
   const projectsLink = document.getElementById('nav-projects');
   const homeSection = document.getElementById('home-section');
   const projectsSection = document.getElementById('projects-section');
   const headerTitle = document.getElementById('header-title');
 
-  const fadeIn = (section) => section.classList.remove('hidden');
-  const fadeOut = (section) => section.classList.add('hidden');
+  const fadeIn = (element) => element.classList.remove('hidden');
+  const fadeOut = (element) => element.classList.add('hidden');
+
+  const changeHeaderTitle = (newTitle) => {
+    fadeOut(headerTitle); // Fade out
+    setTimeout(() => {
+      headerTitle.textContent = newTitle; // Update text
+      fadeIn(headerTitle); // Fade in
+    }, 250); // Halfway through the section fade
+  };
 
   homeLink.onclick = (e) => {
     e.preventDefault();
     fadeIn(homeSection);
     fadeOut(projectsSection);
-    headerTitle.textContent = '{{ site.title }}';
+    changeHeaderTitle('{{ site.title }}');
   };
 
   projectsLink.onclick = (e) => {
     e.preventDefault();
     fadeIn(projectsSection);
     fadeOut(homeSection);
-    headerTitle.textContent = 'Projects';
+    changeHeaderTitle('Projects');
   };
 });
 </script>
