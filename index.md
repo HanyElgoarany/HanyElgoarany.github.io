@@ -6,8 +6,7 @@ title: Home
 
   <!-- Home Section -->
   <section id="home-section" class="fade-section">
-    <p> <strong> Welcome </strong>
-      Hi, I’m {{ site.title }}! This is my technical portfolio showcasing my projects and work.</p>
+    <p>Hi, I’m {{ site.title }}! This is my technical portfolio showcasing my projects and work.</p>
   </section>
 
   <!-- Projects Section -->
