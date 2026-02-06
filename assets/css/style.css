@@ -69,3 +69,11 @@ pre { padding: 1em; overflow-x: auto; }
   pointer-events: none;
   position: absolute;
 }
+/* Fade effect for header title */
+#header-title {
+  transition: opacity 0.5s ease-in-out;
+}
+
+#header-title.hidden {
+  opacity: 0;
+}
