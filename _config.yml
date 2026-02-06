@@ -1,1 +1,8 @@
+title: Hany Elgoarany
+description: Technical Projects and Write-ups
+theme: minima
+markdown: kramdown
+collections:
+  projects:
+    output: true
 
