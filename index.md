@@ -7,13 +7,13 @@ title: Home
 
   <!-- Home Section -->
   <section id="home-section" class="fade-section">
-    <h2>Welcome</h2>
+    <!-- Removed <h2>Welcome</h2> -->
     <p>Hi, I’m {{ site.title }}! This is my technical portfolio showcasing my projects and work.</p>
   </section>
 
   <!-- Projects Section -->
   <section id="projects-section" class="fade-section hidden">
-    <h2>Projects</h2>
+    <!-- Removed <h2>Projects</h2> -->
     <ul>
       {% assign sorted_projects = site.projects | sort: "date" | reverse %}
       {% for project in sorted_projects %}
@@ -25,3 +25,4 @@ title: Home
   </section>
 
 </main>
+
