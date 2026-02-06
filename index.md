@@ -16,12 +16,11 @@ title: Home
   <h2>Projects</h2>
   <ul>
     {% for project in site.projects %}
-    <li>
-      <a href="{{ project.url }}">{{ project.title }}</a> - {{ project.description }}
-    </li>
+      <li>
+        <a href="{{ project.url }}">{{ project.title }}</a> - {{ project.description }}
+      </li>
     {% endfor %}
   </ul>
 </section>
-
 
 </main>
