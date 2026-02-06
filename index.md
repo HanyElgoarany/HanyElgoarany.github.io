@@ -1,4 +1,5 @@
 ---
+layout: custom
 title: Home
 ---
 
@@ -22,4 +23,3 @@ title: Home
   </section>
 
 </main>
-
