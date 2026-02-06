@@ -6,7 +6,7 @@ title: Home
 
   <!-- Home Section -->
   <section id="home-section" class="fade-section">
-    <h2> Welcome </h2>
+    <p><strong> Welcome </strong></p>
     <p> Hi, I’m {{ site.title }}! This is my technical portfolio showcasing my projects and work.</p>
   </section>
 
