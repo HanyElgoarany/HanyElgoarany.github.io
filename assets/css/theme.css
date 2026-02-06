@@ -1,0 +1,20 @@
+:root {
+  --bg: #ffffff;
+  --text: #24292f;
+  --link: #0969da;
+}
+
+[data-theme="dark"] {
+  --bg: #0d1117;
+  --text: #c9d1d9;
+  --link: #58a6ff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--link);
+}
