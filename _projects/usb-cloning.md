@@ -48,6 +48,8 @@ A previously wiped deployment USB (due to an incorrect `wipedisk` target in `aut
 ### Result
 ✅ **Success**
 
+![Balena Etcher Copying one USB to another via clone tool](/assets/images/imagecopybalena.png)
+
 - Entire drive was cloned correctly
 - All partitions and files were intact
 - Resulting drive functioned exactly like the original
@@ -73,6 +75,9 @@ Unlike Balena Etcher, ImageUSB requires a two-step process:
 
 1. Create a full binary image (`.bin`) of the source USB drive
 2. Write the image to a blank USB drive
+
+![Image Creation within ImageUSB](/assets/images/imagecreation.png)
+
 
 ### Observations
 - Image creation completed successfully
@@ -109,6 +114,8 @@ Verify ImageUSB’s ability to write the same image to multiple USB drives simul
 ### Observations
 - One drive reported a write error
 - The remaining drives completed without issue
+
+![Writing Image to multiple drives via ImageUSB](/assets/images/massimageclone.png)
 
 ### Integrity Verification
 Each cloned USB was tested by imaging a known working laptop.
